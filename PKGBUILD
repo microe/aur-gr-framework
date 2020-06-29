@@ -17,6 +17,7 @@ sha256sums=("59947975c364b8ce98940eee4cf98a665ede66083362e60f3e3520d9c7d8bc1e")
 
 prepare() {
     cd "${srcdir}/gr-${pkgver}" || return
+    patch -p0 < ../../0001-fix-qt5-v5.15-compile.patch
     echo "${pkgver}" > version.txt
 }
 
